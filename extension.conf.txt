@@ -1,0 +1,42 @@
+[general]
+
+[default]
+include => ivr
+include => sip
+include => ata
+include => iax
+include => buzon
+include => meetme
+include => gsm
+
+[sip]
+exten => _20XX,1,Dial(SIP/${EXTEN},10)
+exten => _20XX,n,Hangup
+
+[entrantes]
+exten => 2222,1,NoOp
+exten => 2222,n,Answer
+exten => 2222,n,Goto(menu,s,1)
+exten => 2222,n,Hangup
+
+[ata]
+exten => _222X,1,Dial(SIP/${EXTEN},10)
+exten => _222X,n,Voicemail(${EXTEN}@voicemail)
+exten => _222X,n,Hangup
+include => buzon
+
+[iax]
+exten => _22XX,1,Dial(IAX2/${EXTEN},30)
+exten => _22XX,n,Hangup
+exten => _33XX,1,Dial(IAX2/servidor_3/${EXTEN})
+exten => _33XX,2,Hangup()
+exten => _44XX,1,Dial(IAX2/servidor_4/${EXTEN})
+exten => _44XX,2,Hangup()
+exten => _55XX,1,Dial(IAX2/servidor_5/${EXTEN})
+exten => _55XX,2,Hangup()
+exten => _66XX,1,Dial(IAX2/servidor_6/${EXTEN})
+exten => _66XX,2,Hangup()
+exten => _77XX,1,Dial(IAX2/servidor_7/${EXTEN})
+exten => _77XX,2,Hangup()
+
+

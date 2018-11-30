@@ -1,0 +1,127 @@
+[general]
+context=default
+port=5060
+bindaddr=0.0.0.0
+srvlookup=yes
+insecure=inviteport
+language=en
+disallow=all
+allow=gsm
+allow=ulaw
+allow=alaw
+
+[gsm]
+context=entrantes
+type=friend
+host=dynamic
+username=gsm
+secret=gsm
+calleried="gsm" <+56983915928>
+qualify=yes
+nat=yes
+directmedia=no
+dtmfmode=rfc2833
+language=en
+allowtransfer=yes
+
+[2000]
+type=friend
+host=dynamic
+username=2000
+secret=2000
+callerid="Juan Arriaza" <2000>
+qualify=yes
+nat=yes
+
+[2001]
+type=friend
+host=dynamic
+username=2001
+secret=2001
+callerid="Felipe Tapia" <2001>
+qualify=yes
+nat=yes
+
+
+[2002]
+type=friend
+host=dynamic
+username=2002
+secret=2002
+callerid="Nico Huaquimilla" <2002>
+qualify=yes
+nat=yes
+
+
+[2003]
+type=friend
+host=dynamic
+username=2003
+secret=2003
+callerid="Ignacio Sanzana" <2003>
+qualify=yes
+nat=yes
+
+
+[2004]
+type=friend
+host=dynamic
+username=2004
+secret=2004
+callerid="Joshue Jorquera" <2004>
+qualify=yes
+nat=yes
+
+# ATA
+
+[2220]
+type=friend
+host=dynamic
+username=2220
+secret=2220
+callerid="Juan Arriaza" <2220>
+qualify=yes
+nat=yes
+mailbox=2220@voicemail
+
+[2221]
+type=friend
+host=dynamic
+username=2221
+secret=2221
+callerid="Felipe Tapia" <2221>
+qualify=yes
+nat=yes
+mailbox=2221@voicemail
+
+[2222]
+type=friend
+host=dynamic
+username=2222
+secret=2222
+callerid="Nico Huaquimilla" <2222>
+qualify=yes
+nat=yes
+mailbox=2222@voicemail
+
+[2223]
+type=friend
+host=dynamic
+username=2223
+secret=2223
+callerid="Ignacio Sanzana" <2223>
+qualify=yes
+nat=yes
+mailbox=2223@voicemail
+
+[2224]
+type=friend
+host=dynamic
+username=2224
+secret=2224
+callerid="Joshue Jorquera" <2224>
+qualify=yes
+mailbox=2224@voicemail
+
+
+

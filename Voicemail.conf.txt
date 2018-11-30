@@ -1,0 +1,19 @@
+[general]
+
+[default]
+include => sip
+include => ata
+include => iax
+
+[sip]
+exten => _20XX,1,Dial(SIP/${EXTEN},30)
+exten => _20XX,n,Hangup
+
+[ata]
+exten => _222X,1,Dial(SIP/${EXTEN},30)
+exten => _222X,n,Hangup
+
+[iax]
+exten => _22XX,1,Dial(IAX2/${EXTEN},30)
+exten => _22XX,n,Hangup
+
